@@ -1,0 +1,148 @@
+.about-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                url('images/theatre.jpg') center/cover;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: $white;
+    margin-bottom: $spacing-lg;
+
+    h1 {
+        font-size: 2.5rem;
+        font-family: $font-primary;
+    }
+}
+
+.about-content {
+    padding: $spacing-lg 0;
+}
+
+.about-section {
+    background: $white;
+    padding: $spacing-lg;
+    border-radius: 5px;
+    box-shadow: $shadow-md;
+    margin-bottom: $spacing-lg;
+
+    h2 {
+        color: $primary-color;
+        margin-bottom: $spacing-md;
+        border-bottom: 2px solid $primary-color;
+        padding-bottom: $spacing-sm;
+        font-family: $font-primary;
+        font-weight: bold;
+    }
+
+    p {
+        margin-bottom: $spacing-md;
+        font-family: $font-primary;
+        line-height: 1.8;
+    }
+}
+
+.theater-photo {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 8px;
+    margin: $spacing-lg auto;
+    display: block;
+    box-shadow: $shadow-lg;
+}
+
+.photo-caption {
+    text-align: center;
+    margin-top: $spacing-md;
+
+    .caption-text {
+        font-style: italic;
+        color: lighten($dark-bg, 40%);
+        font-size: 0.9rem;
+        margin-top: $spacing-sm;
+        font-family: $font-primary;
+    }
+}
+
+.team {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: $spacing-lg;
+    margin-top: $spacing-md;
+}
+
+.team-member {
+    text-align: center;
+
+    img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: $spacing-md;
+        border: 3px solid $primary-color;
+    }
+
+    h3 {
+        font-family: $font-primary;
+        font-weight: bold;
+        margin-bottom: $spacing-sm;
+        color: $dark-bg;
+    }
+
+    p {
+        font-family: $font-primary;
+        color: lighten($dark-bg, 30%);
+        margin: 0;
+    }
+}
+
+@media (max-width: $breakpoint-md) {
+    .about-hero {
+        height: 250px;
+        
+        h1 {
+            font-size: 2rem;
+        }
+    }
+
+    .about-section {
+        padding: $spacing-md;
+    }
+
+    .team {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: $spacing-md;
+    }
+
+    .team-member {
+        img {
+            width: 120px;
+            height: 120px;
+        }
+    }
+
+    .theater-photo {
+        margin: $spacing-md auto;
+    }
+}
+
+@media (max-width: $breakpoint-sm) {
+    .about-hero {
+        height: 200px;
+        
+        h1 {
+            font-size: 1.5rem;
+        }
+    }
+
+    .about-section {
+        padding: $spacing-md;
+    }
+
+    .team {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}

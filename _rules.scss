@@ -1,0 +1,52 @@
+.rules-content {
+    padding: $spacing-lg 0;
+    
+    .important-note {
+        background: $important-bg;
+        border-left: 4px solid $primary-color;
+        padding: $spacing-md;
+        margin-bottom: $spacing-lg;
+        border-radius: 3px;
+        
+        h3 {
+            color: $primary-color;
+            margin-bottom: $spacing-sm;
+            font-weight: bold;
+        }
+    }
+    
+    .rules-section {
+        background: $white;
+        padding: $spacing-lg;
+        border-radius: 5px;
+        box-shadow: $shadow-md;
+        margin-bottom: $spacing-lg;
+        
+        h2 {
+            color: $primary-color;
+            margin-bottom: $spacing-md;
+            border-bottom: 2px solid $primary-color;
+            padding-bottom: $spacing-sm;
+            font-weight: bold;
+        }
+        
+        .rules-list {
+            list-style-type: none;
+            
+            li {
+                margin-bottom: $spacing-md;
+                padding-left: 2rem;
+                position: relative;
+                
+                &::before {
+                    content: "•";
+                    color: $primary-color;
+                    font-weight: bold;
+                    position: absolute;
+                    left: 0;
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+}
