@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+     <link rel="stylesheet" href="css/index.css">
+    <title>Театр | Главная</title>
+</head>
+<body>
+   <header>
+    <div class="container">
+        <div class="header-content">
+            <div class="logo-section">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="Логотип театра" class="logo-img">
+                </a>
+                <div class="theater-name">
+                    <h1>Национальный академический драматический театр</h1>
+                    <div class="subtitle">им. М. Горького</div>
+                </div>
+            </div>
+
+           <button class="burger-menu" id="burgerButton" aria-label="Открыть меню">
+            <img src="svg/burger.svg" alt="Меню" class="burger-icon">
+            </button>
+
+            <nav class="nav" id="mainNav">
+                <ul class="nav-list">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="afisha.html">Афиша</a></li>
+                    <li><a href="about.html">О театре</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                    <li><a href="rules.html">Правила</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+
+    <section class="hero-banner">
+        <div class="welcome-text">
+            <h2>Добро пожаловать в наш театр</h2>
+            <p class="quote">«Искусство должно облагораживать жизнь людей»</p>
+        </div>
+    </section>
+
+    <section class="afisha">
+        <div class="container">
+            <h2 class="current-performances">Текущие постановки</h2>
+            <div class="plays">
+                
+                <div class="play-card">
+                    <div class="play-img" style="background-image: url('images/night.jpg');"></div>
+                    <div class="play-info">
+                        <h3 class="play-title">Двенадцатая ночь</h3>
+                        <p class="play-author">Комедия Уильяма Шекспира</p>
+                        <div class="play-meta">
+                            <p><strong>Дата:</strong> 18 мая, 19:00</p>
+                            <a href="afisha.html" class="btn">Купить билет</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="play-card">
+                    <div class="play-img" style="background-image: url('images/faust.jpg');"></div>
+                    <div class="play-info">
+                        <h3 class="play-title">Фауст. Сделка с дьяволом</h3>
+                        <p class="play-author">Трагедия И.В. Фон Гете</p>
+                        <div class="play-meta">
+                            <p><strong>Дата:</strong> 24 мая, 19:00</p>
+                            <a href="afisha.html" class="btn">Купить билет</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="play-card">
+                    <div class="play-img" style="background-image: url('images/pick.jpg');"></div>
+                    <div class="play-info">
+                        <h3 class="play-title">Пиковая Дама</h3>
+                        <p class="play-author">Мистический фарс А.Пушкина</p>
+                        <div class="play-meta">
+                            <p><strong>Дата:</strong> 6 июня, 19:00</p>
+                            <a href="afisha.html" class="btn">Купить билет</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="play-card">
+                    <div class="play-img" style="background-image: url('images/graph.jpg');"></div>
+                    <div class="play-info">
+                        <h3 class="play-title">Граф Монте-Кристо</h3>
+                        <p class="play-author">Рок-опера А.Дюма</p>
+                        <div class="play-meta">
+                            <p><strong>Дата:</strong> 10 июня, 19:00</p>
+                            <a href="afisha.html" class="btn">Купить билет</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Контакты</h3>
+                    <p>Адрес: г. Минск, ул. Волорадского, 5</p>
+                    <p>Телефон: +375 25 500-81-13</p>
+                    <p>Email: nadt@rustheatre.by</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Часы работы</h3>
+                    <p>Касса: 10:00 - 19:00</p>
+                    <p>Спектакли: по расписанию</p>
+                </div>
+                  <div class="footer-section">
+                    <h3>Соцсети</h3>
+                     <a href="https://www.instagram.com/gorkytheatre.by?igsh=OWFheHV4ZWF1bnZp" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+                    <a href="https://www.tiktok.com/@gorky_theatre_by?_t=ZM-8zWhM7BVO7R&_r=1" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a>
+                    <a href="https://t.me/gorkytheatre" target="_blank"><i class="fab fa-telegram"></i> Telegram</a>
+                    </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Национальный академический драматический театр им. М. Горького. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+     <script src="js/burger.js"> </script>
+</body>
+</html>
