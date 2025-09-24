@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<theater>
+    <info>
+        <name>Национальный академический драматический театр</name>
+        <subtitle>им. М. Горького</subtitle>
+        <established>1974</established>
+        <seats>850</seats>
+    </info>
+    
+    <promotions>
+        <promotion>
+            <title>Скидка для студентов</title>
+            <discount>10</discount>
+            <description>При предъявлении студенческого билета</description>
+        </promotion>
+        <promotion>
+            <title>Вечерние спектакли</title>
+            <discount>15</discount>
+            <description>Скидка на все спектакли после 18:00</description>
+        </promotion>
+    </promotions>
+    
+    <contacts>
+        <address>г. Минск, ул. Володарского, 5</address>
+        <phone>+375 25 500-81-13</phone>
+        <email>nadt@rustheatre.by</email>
+        <working_hours>10:00 - 19:00</working_hours>
+    </contacts>
+</theater>
