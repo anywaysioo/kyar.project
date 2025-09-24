@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="css/main.css">
-     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="index" type="application/xml" href="xml/index.xml">
     <title>Театр | Главная</title>
 </head>
 <body>
@@ -39,12 +40,42 @@
     </div>
 </header>
 
-    <section class="hero-banner">
-        <div class="welcome-text">
-            <h2>Добро пожаловать в наш театр</h2>
-            <p class="quote">«Искусство должно облагораживать жизнь людей»</p>
+  <section class="hero-banner">
+    <div class="banner-container">
+        <h2>Добро пожаловать в наш театр</h2>
+        <p class="quote">«Искусство должно облагораживать жизнь людей»</p>
+        <p class="author">— Максим Горький</p>
+        <img src="images/gorky.jpg" alt="Максим Горький" class="banner-portrait">
+    </div>
+</section>
+
+    <section class="slider-section">
+    <div class="container">
+        <div class="slider">
+            <div class="slides">
+                <div class="slide active">
+                    <img src="images/design.jpg" alt="Интерьер театра">
+                    <div class="slide-caption">Великолепный интерьер зала</div>
+                </div>
+                <div class="slide">
+                    <img src="images/moments.jpg" alt="Спектакль">
+                    <div class="slide-caption">Моменты из спектаклей</div>
+                </div>
+                <div class="slide">
+                    <img src="images/people.jpg" alt="Актеры">
+                    <div class="slide-caption">Наши талантливые актеры</div>
+                </div>
+                <div class="slide">
+                    <img src="images/backstage.jpg" alt="Сцена">
+                    <div class="slide-caption">Закулисье театра</div>
+                </div>
+            </div>
+            <button class="slider-btn prev-btn">‹</button>
+            <button class="slider-btn next-btn">›</button>
+            <div class="slider-dots"></div>
         </div>
-    </section>
+    </div>
+</section>
 
     <section class="afisha">
         <div class="container">
@@ -58,7 +89,7 @@
                         <p class="play-author">Комедия Уильяма Шекспира</p>
                         <div class="play-meta">
                             <p><strong>Дата:</strong> 18 мая, 19:00</p>
-                            <a href="afisha.html" class="btn">Купить билет</a>
+                            <button class="btn" onclick="openBookingModal()">Купить билеты</button>
                         </div>
                     </div>
                 </div>
@@ -70,7 +101,7 @@
                         <p class="play-author">Трагедия И.В. Фон Гете</p>
                         <div class="play-meta">
                             <p><strong>Дата:</strong> 24 мая, 19:00</p>
-                            <a href="afisha.html" class="btn">Купить билет</a>
+                            <button class="btn" onclick="openBookingModal()">Купить билеты</button>
                         </div>
                     </div>
                 </div>
@@ -82,7 +113,7 @@
                         <p class="play-author">Мистический фарс А.Пушкина</p>
                         <div class="play-meta">
                             <p><strong>Дата:</strong> 6 июня, 19:00</p>
-                            <a href="afisha.html" class="btn">Купить билет</a>
+                            <button class="btn" onclick="openBookingModal()">Купить билеты</button>
                         </div>
                     </div>
                 </div>
@@ -94,7 +125,7 @@
                         <p class="play-author">Рок-опера А.Дюма</p>
                         <div class="play-meta">
                             <p><strong>Дата:</strong> 10 июня, 19:00</p>
-                            <a href="afisha.html" class="btn">Купить билет</a>
+                            <button class="btn" onclick="openBookingModal()">Купить билеты</button>
                         </div>
                     </div>
                 </div>
@@ -102,6 +133,75 @@
         </div>
     </section>
 
+      <div class="modal" id="bookingModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 id="modalPlayTitle"></h2>
+            <p id="modalPlayDate"></p>
+            
+            <div class="seat-map">
+                <div class="stage">СЦЕНА</div>
+                <div class="seats-grid" id="seatsGrid"></div>
+            </div>
+            
+           <div class="seat-legend">
+    <div class="legend-item">
+        <div class="legend-color" style="background: #ddd;"></div>
+        <span>Свободно</span>
+    </div>
+    <div class="legend-item">
+        <div class="legend-color" style="background: #800020;"></div>
+        <span>Выбрано</span>
+    </div>
+    <div class="legend-item">
+        <div class="legend-color" style="background: #d4af37;"></div>
+        <span>VIP (первые 2 ряда)</span>
+    </div>
+    <div class="legend-item">
+        <div class="legend-color" style="background: #333;"></div>
+        <span>Занято</span>
+    </div>
+</div>
+            <div class="total-price" id="totalPrice">
+                Итого: 0 BYN
+            </div>
+            
+            <form id="bookingForm">
+                <div class="form-group">
+                    <label for="name">ФИО</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Телефон</label>
+                    <input type="tel" id="phone" required>
+                </div>
+                <button type="submit" class="btn btn-block">Оформить заказ</button>
+            </form>
+        </div>
+    </div>
+<section class="promo-banner container">
+    <h2>Специальное предложение</h2>
+    <p>При покупке билетов онлайн — скидка 10% для студентов и пенсионеров</p>
+    <button class="btn">Узнать подробности</button>
+</section>
+<section class="stats container">
+    <div class="stat-item">
+        <h3>150+</h3>
+        <p>Спектаклей в репертуаре</p>
+    </div>
+    <div class="stat-item">
+        <h3>50 лет</h3>
+        <p>Истории театра</p>
+    </div>
+    <div class="stat-item">
+        <h3>1000+</h3>
+        <p>Зрителей ежедневно</p>
+    </div>
+</section>
     <footer>
         <div class="container">
             <div class="footer-content">
@@ -130,5 +230,6 @@
     </footer>
 
      <script src="js/burger.js"> </script>
+     <script src="js/index.js"> </script>
 </body>
 </html>
